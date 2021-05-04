@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" style="font-size: 22px"><!-- 这里默认使用22px来使用rem  ，可以使用手淘的flex库来设置，但是需要重新调整rem的数值-->
+<html lang="en" style="font-size: 22px">
+  <!-- 这里默认使用22px来使用rem  ，可以使用手淘的flex库来设置，但是需要重新调整rem的数值-->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0,userScale=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>基于JQ、MUI的移动端过滤栏组件</title>
     <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.bootcdn.net/ajax/libs/mui/3.7.1/js/mui.min.js"></script>
@@ -12,7 +13,7 @@
       rel="stylesheet"
     />
     <link href="css/icon/iconfont.css" rel="stylesheet" />
-    <link href="css/filterToolbar.css" rel="stylesheet" />
+    <link href="css/mFilterToolbar.css" rel="stylesheet" />
   </head>
   <body>
     <div class="filterbox">
@@ -26,13 +27,12 @@
       </div>
       <div class="tab-content">
         <div class="l-cont" id="tab-l">
-          <div class="tc-btn active" data-value="">
+          <div class="tc-btn active" data-value="0">
             全部<span class="mui-badge mui-badge-danger allCount">0</span>
           </div>
-          <div class="tc-btn" data-value="1"><!-- 设置tab对应的值-->
-            tab1<span class="mui-badge mui-badge-danger countNum1"
-              >0</span
-            >
+          <div class="tc-btn" data-value="1">
+            <!-- 设置tab对应的值-->
+            tab1<span class="mui-badge mui-badge-danger countNum1">0</span>
           </div>
           <div class="tc-btn" data-value="2">
             tab2<span class="mui-badge mui-badge-danger countNum2">0</span>
@@ -42,7 +42,8 @@
           </div>
         </div>
         <div class="r-cont" id="tab-r" style="display: none">
-          <div class="tc-btn active" data-value="sortType1"> <!--排序对应的key 升序为asc  降序为desc 。  默认为asc 。点击后会toggle这两个值-->
+          <div class="tc-btn active" data-value="sortType1">
+            <!--排序对应的key 升序为asc  降序为desc 。  默认为asc 。点击后会toggle这两个值-->
             按热度<span class="mui-icon iconfont icon-paixu1"></span>
           </div>
           <div class="tc-btn" data-value="sortType2">
@@ -56,10 +57,22 @@
     </div>
     <list>列表...</list>
   </body>
+  <script src="js/mFilterToolbar.js"></script>
   <script>
-    var cacheObj = {
-      status:''
-    }; //存储过滤的值
+    // 实例化一个ft对象
+    var ft = new mFilterToolbar({
+      defaultValue: {
+        tabValue: "1",
+        cacheSortObj: {
+          sortName: "sortType2",
+          sortType: "desc",
+        },
+      }, //默认值对象
+      onTabClick: function (obj) {
+        //tab点击完成后的回调函数
+        console.log(obj);
+        //在这里可以调用加载列表代码...
+      },
+    });
   </script>
-      <script src="js/filterToolbar.js"></script>
 </html>
