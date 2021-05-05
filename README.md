@@ -25,11 +25,11 @@ mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，可根据
    ```javascript
        // 实例化一个ft对象
     var ft = new mFilterToolbar({
-      defaultValue: {
-        tabValue: "1",
-        cacheSortObj: {
-          sortName: "sortType2",
-          sortType: "desc",
+      defaultValue: { 
+        tabValue: "1",//左tab的默认值
+        cacheSortObj: { //右tab的排序默认值
+          sortName: "sortType2",//要排序的字段
+          sortType: "desc",//升序asc 降序desc
         },
       }, //默认值对象
       onTabClick: function (obj) {
@@ -39,8 +39,9 @@ mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，可根据
       },
     });
    ```
-ft实例中有如下方法：
+# 注意：defaultValue中的属性都是必须的 #
 
+### ft实例中有如下方法：
 #### getValue：
 
 获取当前mFilterToolbar的值
@@ -50,21 +51,6 @@ ft实例中有如下方法：
 
 初始化mFilterToolbar的值，并重置mFilterToolbar到初始状态
 
-```javascript
- data = [{
-   id:'',  // 必须,唯一的id值，String类型
-   name:'', //必须,对应mCascader节点的显示文本 ，String类型
-   children:[...] //子节点 ，Array类型
-    },...]
-```
-
-#### defaultValue：
-
-
-
-
-
-     
 
 ## 例子：
 ##### 组件的DOM不写死到js中，保留了原本组件的结构，方便你自定义组件的样式
