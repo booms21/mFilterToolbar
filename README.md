@@ -1,11 +1,13 @@
 
 # mFilterToolbar
 
-mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，支持排序、组件默认值、组件取值、角标
+mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，可根据自定义的条件对列表进行过滤，支持排序、组件默认值、组件取值、角标。
 
 <img width="300" alt="QQ20210505-104042@2x" src="https://user-images.githubusercontent.com/36625154/117092071-c57a7e80-ad8f-11eb-9d3f-ab93f7e0cff8.png">
 
 
+
+## 使用方法：
 首先引入mui和jq库，mFilterToolbar.css（mFilterToolbar的样式）
 ```html
  <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -17,7 +19,7 @@ mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，支持排
     <link href="css/mFilterToolbar.css" rel="stylesheet" />
      <script src="js/mFilterToolbar.js"></script>
 ```
-## 使用方法：
+
 创建一个mFilterToolbar实例，并传入配置项：
 
    ```javascript
