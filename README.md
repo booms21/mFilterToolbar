@@ -39,7 +39,7 @@ mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，可根据
       },
     });
    ```
-# 注意：defaultValue中的属性都是必须的 #
+##### 注意：1.defaultValue中的属性都是必须的 2.创建实例前需要先在tc-btn中设置data-value（唯一的tab值）
 
 ### ft实例中有如下方法：
 #### getValue：
@@ -67,11 +67,11 @@ mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，可根据
       </div>
       <div class="tab-content">
         <div class="l-cont" id="tab-l">
+           <!-- 因为mFilterToolbar依赖data-value，需要在对应的tc-btn上data-value设置tab对应的值（唯一）-->
           <div class="tc-btn active" data-value="0">
             全部<span class="mui-badge mui-badge-danger allCount">0</span>
           </div>
           <div class="tc-btn" data-value="1">
-            <!-- 设置tab对应的值-->
             tab1<span class="mui-badge mui-badge-danger countNum1">0</span>
           </div>
           <div class="tc-btn" data-value="2">
