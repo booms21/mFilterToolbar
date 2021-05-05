@@ -40,7 +40,7 @@
     };
 
     initFilterTab(options);
-    setFilterToolValue(options.defaultValue);
+   options.defaultValue && setFilterToolValue(options.defaultValue);
     this.getValue = getValue;
     this.options = options;
   }
