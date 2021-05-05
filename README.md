@@ -1,8 +1,9 @@
+
 # mFilterToolbar
 
 mFilterToolbar 是一款mui风格的移动端h5顶部过滤栏组件，支持排序、组件默认值、组件取值、角标
 
-
+<img width="300" alt="QQ20210505-104042@2x" src="https://user-images.githubusercontent.com/36625154/117092071-c57a7e80-ad8f-11eb-9d3f-ab93f7e0cff8.png">
 
 
 首先引入mui和jq库，mFilterToolbar.css（mFilterToolbar的样式）
@@ -64,7 +65,7 @@ ft实例中有如下方法：
      
 
 ## 例子：
-##### mcascader的DOM不写死到js中，保留了原本组件的结构，方便你自定义组件的样式
+##### 组件的DOM不写死到js中，保留了原本组件的结构，方便你自定义组件的样式
 ``` html
  
     <div class="filterbox">
